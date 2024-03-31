@@ -1,0 +1,256 @@
+/*Estilo geral*/
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+  
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.Interface{
+    max-width: 1388px;
+    margin: 0 auto;
+
+}
+ 
+.flex{
+    display: flex;
+}
+
+h2.título{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+h2.título span{
+    color: gold;
+}
+
+
+
+/*Estilo cabeça-----------------------------------------------*/
+header{
+    padding: 30px 4%;
+}
+
+header > .Interface{ /*header mais para mostrar a hierquia*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a{
+    color: rgb(112, 111, 111);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: gold;
+    transform: scale(1.09);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 47px;
+}
+
+header .lanna-contato button{ /*lembrar que ponto indica classe*/
+    padding: 12px 40px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: gold;
+    border: 0;
+    border-radius: 29px;
+    cursor: pointer;
+}
+
+header .lanna-contato button:hover{
+    box-shadow: 0px 0px 8px rgba(255, 217, 0, 0.829) ;
+} /*Fim do estilo cabeça---------------------------------------------*/
+
+
+/*Começo do estilo topo----------------------------------------------*/
+section.topo-site{
+    padding: 40px 4%;
+}
+
+section.topo-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 170px;
+
+}
+
+.topo-site h1{
+    color: white;
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.topo-site .bts-topo{
+    color: white;
+    margin: 10px 0;
+}
+
+.topo-site .img-topo img{ /*Animação da imagem e controle de brilho da imagem*/
+    position: relative;
+    animation: flutua 2s ease-in-out infinite alternate;
+    border-radius: 150px;
+    box-shadow: 0px 0px 8px rgb(250, 2, 2) ;
+    
+}
+
+@keyframes flutua{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 32px;
+    }
+}
+
+/*Estilo das formações******************************************************/
+
+section.formações{
+    padding: 40px 4%;
+}
+
+section.formações .flex{
+    gap: 62px;
+}
+
+.formações .formação-box{
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+    margin-top: 49px;
+    transition: .2s;
+}
+
+.formações .formação-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 23px rgba(255, 255, 255, 0.514);
+}
+
+.formações .formação-box i{
+    font-size: 60px;
+    color: gold;
+}
+
+.formações .formação-box h3{
+    font-size: 23px;
+    margin: 15px 0;
+
+}
+/*Estilo do projeto************************************************/
+section.projetos{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 11px rgba(255, 217, 0, 0.24);
+}
+
+section.projetos .flex{
+    justify-content: space-around;
+    margin-top: 64px;
+}
+
+.img-pro{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0;
+    transition: 7s;
+    cursor: pointer;
+    border-radius: 38px;
+    position: relative;
+}
+
+.img-pro:hover{
+    background-position: 100% 100%;
+}
+
+.escuro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.308);
+    color: white;
+    opacity: 0;
+    transition: .3s;
+}
+
+.escuro:hover{
+    opacity: 1;
+}
+
+/*Estilo do contato**********************************************/
+
+section.contatos{
+    padding: 89px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 44px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: rgba(235, 231, 208, 0.164);
+    border: 0;
+    outline: 0;
+    padding: 22px 14px;
+    border-radius: 18px;
+    color: white;
+    font-size: 17px;
+}
+
+form textarea{
+    resize: none;
+    max-height:500px;
+}
+
+form .bot-enviar{
+    margin-top: 24px;
+    text-align: center;
+}
+
+form .bot-enviar input{
+    width: 100px;
+    background-color: gold;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover,form .bot-enviar input:hover{
+    box-shadow: 0px 0px 10px rgba(248, 214, 23, 0.568);
+    transform: scale(1.05);
+}
+
+
